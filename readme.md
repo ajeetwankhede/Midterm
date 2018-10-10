@@ -15,6 +15,10 @@ Path planning module designed for Acme Robotics as a part of Midterm project for
 1. Complete the stub implementations.
 2. Run the continuous integration.
 To check if PID controller converges in given time.
+
+## Link for SIP document
+https://docs.google.com/spreadsheets/d/1-j5CXI1eY91Z-8jk83BunUeLEoEDe8iBQdnBuzrfptE/edit?usp=sharing 
+
 ## Standard install via command-line
 ```
 git clone --recursive https://github.com/ajeetwankhede/Midterm
