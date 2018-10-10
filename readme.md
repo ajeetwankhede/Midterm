@@ -7,9 +7,10 @@
 Driver: Ajeet Wankhede
 Navigator: Likhita Madiraju
 
-## Overview
+## Project Overview
 
-Path planning module designed for Acme Robotics as a part of Midterm project for ENPM808X
+A 2D path planner with A* algorithm will be designed and developed, for Acme Robotics, for the navigation of their TurtleBot 2, in a known warehouse environment. The path planner will assist the TurtleBot in maneuvering through the warehouse for autonomous surveillance. The A* algorithm will ensure optimality of the path, with obstacle avoidance defined in the floor plan. The output of the path planner will be a trajectory of the robot defined by Cartesian coordinates. A controller module, developed by Acme Robotics, will monitor the velocity of the robot and ensure it is following the path provided. The robot also has a 2D LIDAR sensor to detect humans in its path with the help of perception module developed
+by Acme Robotics.
 
 ## TODO
 1. Complete the stub implementations.
@@ -18,6 +19,12 @@ To check if PID controller converges in given time.
 
 ## Link for SIP document
 https://docs.google.com/spreadsheets/d/1-j5CXI1eY91Z-8jk83BunUeLEoEDe8iBQdnBuzrfptE/edit?usp=sharing 
+
+## Dependencies
+
+The path planning module has following dependencies:
+1. googletest
+2. cmake
 
 ## Standard install via command-line
 ```
@@ -48,7 +55,7 @@ In your work directory, use cmake to create an Eclipse project for an [out-of-so
 cd ~/workspace
 mkdir -p boilerplate-eclipse
 cd boilerplate-eclipse
-cmake -G "Eclipse CDT4 - Unix Makefiles" -D CMAKE_BUILD_TYPE=Debug -D CMAKE_ECLIPSE_VERSION=4.7.0 -D CMAKE_CXX_COMPILER_ARG1=-std=c++14 ../cpp-boilerplate/
+cmake -G "Eclipse CDT4 - Unix Makefiles" -D CMAKE_BUILD_TYPE=Debug -D CMAKE_ECLIPSE_VERSION=4.7.0 -D CMAKE_CXX_COMPILER_ARG1=-std=c++14 ../Midterm/
 ```
 
 ## Import
@@ -72,3 +79,13 @@ unfold Build Targets, double click on "all" to build all projects.
 select Run As -> Local C/C++ Application
 
 2. Choose the binaries to run (e.g. shell-app, cpp-test for unit testing)
+
+
+## How to generate Doxygen report
+
+```
+sudo apt-get install doxygen
+sudo apt install doxygen-gui
+doxywizard
+```
+Open doxywizard and select the workspace as the repository. Fill the details as required and set the source code folder to the repository. Create a new folder in the repository and select that as the destination directory. Proceed with the default settings and generate the documentation.
