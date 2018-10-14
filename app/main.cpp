@@ -13,9 +13,24 @@
  */
 
 #include <iostream>
+#include <memory>
+#include <vector>
+#include <Map.hpp>
+
+using std::shared_ptr;
+using std::make_shared;
+using std::cout;
+using std::cin;
+using std::endl;
 
 int main() {
-  // ToDo Add the code for creating a map
-  // ToDo Run the A* algorithm to find the optimal trajectory
-    return 0;
+  // Create an object of class Map.
+  shared_ptr<Map> MAP;
+  MAP = make_shared<Map>();
+  double l = 0.0, w = 0.0;
+  // Ask user for length and width of Map
+  cout << "Enter the length and width of map: " << endl;
+  cin >> l >> w;
+  MAP->createMap(l, w);
+  return 0;
 }
