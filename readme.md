@@ -25,6 +25,8 @@ https://docs.google.com/spreadsheets/d/1-j5CXI1eY91Z-8jk83BunUeLEoEDe8iBQdnBuzrf
 The path planning module has following dependencies:
 1. googletest
 2. cmake
+3. gnuplot
+4. gnuplot-iostream(http://stahlke.org/dan/gnuplot-iostream/)
 
 ## Standard install via command-line
 ```
