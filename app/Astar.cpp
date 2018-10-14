@@ -32,7 +32,7 @@ Astar::~Astar() {
   // Destructor stub
 }
 
-void runAstar() {
+void Astar::runAstar() {
   // ToDo Create a map
   // ToDo Set and verify the start and end nodes
   // ToDo Set the resolution
@@ -41,7 +41,7 @@ void runAstar() {
   // ToDo Show the output
 }
 
-string verifyNodes() {
+string Astar::verifyNodes() {
   // ToDo Return a string after verifying the start and end nodes
   return "Invalid";
 }

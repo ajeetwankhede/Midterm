@@ -23,10 +23,10 @@ Output::~Output() {
   // Destructor stub
 }
 
-void writeTextFile() {
+void Output::writeTextFile() {
   // ToDo Write a code to save the trajectory coordinates in a text file
 }
 
-void showOutput() {
+void Output::showOutput() {
   // ToDo Display the output of A* on a plot
 }

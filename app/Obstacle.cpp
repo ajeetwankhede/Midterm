@@ -33,21 +33,21 @@ Obstacle::~Obstacle() {
   // Destructor stub
 }
 
-bool verifyObstacle(double length, double width) {
+bool Obstacle::verifyObstacle(double length, double width) {
   // ToDo Check if obstacle lies within map boundaries
   // ToDo Return true if obstacle is inside the map boundaries else return false
   return false;
 }
 
-void changeRobotDimension1(double length, double width) {
+void Obstacle::changeRobotDimension1(double length, double width) {
   // ToDo Change the robot length and width
 }
 
-void createObstacleSpace() {
+void Obstacle::createObstacleSpace() {
   // ToDo Add the largest dimension of robot to the obstacle dimensions
 }
 
-void calculateVertices(double centerX, double centerY, double length,
+void Obstacle::calculateVertices(double centerX, double centerY, double length,
                        double width) {
   // ToDo Write a code to calculate the vertices of
   // the rectangle from the given data

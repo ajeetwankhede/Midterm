@@ -12,7 +12,11 @@
  *  Defining methods of Map class
  */
 
+#include <vector>
 #include <Map.hpp>
+#include <gnuplot-iostream.h>
+
+using std::vector;
 
 Map::Map() {
   // Initializing values to the attributes of Map class
@@ -24,11 +28,21 @@ Map::~Map() {
   // Destructor stub
 }
 
-void createMap(double l, double w) {
-  // ToDo Create a plot using gnuplot library of given length and width
-  // ToDo Add obstacles in the plot
+void Map::createMap(double l, double w) {
+  length = l;
+  width = w;
+  Gnuplot gp;
+  vector<std::pair<double, double> > xy_pts;
+  for (double x = -2; x < 2; x += 0.1) {
+    double y = x * x;
+    xy_pts.push_back(std::make_pair(x, y));
+  }
+  gp << "set xrange [0:" << l << "]\nset yrange [0:" << w << "]\n";
+  // '-' means read from stdin.  The send1d() function sends data to gnuplot's stdin.
+  gp << "plot'-'with points\n";
+  gp.send1d(xy_pts);
 }
 
-void showMap() {
+void Map::showMap() {
   // ToDo Display the plot of the map
 }
