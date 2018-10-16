@@ -23,7 +23,7 @@ std::shared_ptr<Astar> testObject1;
  */
 TEST(Astar, startNodeTest) {
   testObject1 = std::make_shared<Astar>();
-  ASSERT_LT(0.0, testObject1->startNode);
+  ASSERT_LT(0, testObject1->startNode.first);
 }
 
 /**
@@ -31,13 +31,5 @@ TEST(Astar, startNodeTest) {
  */
 TEST(Astar, endNodeTest) {
   testObject1 = std::make_shared<Astar>();
-  ASSERT_LT(0.0, testObject1->endNode);
-}
-
-/**
- * @brief Check if the resolution is less than zero
- */
-TEST(Astar, resolutionTest) {
-  testObject1 = std::make_shared<Astar>();
-  ASSERT_LT(0.0, testObject1->resolution);
+  ASSERT_LT(0, testObject1->endNode.first);
 }
