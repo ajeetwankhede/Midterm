@@ -1,6 +1,6 @@
 # C++ Boilerplate
 [![Build Status](https://travis-ci.org/likhitam/Midterm.svg?branch=master)](https://travis-ci.org/likhitam/Midterm) 
-[![Coverage Status](https://coveralls.io/repos/github/likhitam/Midterm/badge.svg)](https://coveralls.io/github/likhitam/Midterm)
+[![Coverage Status](https://coveralls.io/repos/github/likhitam/Midterm/badge.svg?branch=master)](https://coveralls.io/github/likhitam/Midterm?branch=master)
 ---
 
 ## Author Name for Sprint 1
