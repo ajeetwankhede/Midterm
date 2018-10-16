@@ -12,8 +12,8 @@
  *  Obstacle class declaration
  */
 
-#ifndef CPP_BOILERPLATE_INCLUDE_OBSTACLE_HPP_
-#define CPP_BOILERPLATE_INCLUDE_OBSTACLE_HPP_
+#ifndef DESKTOP_MIDTERM_INCLUDE_OBSTACLE_HPP_
+#define DESKTOP_MIDTERM_INCLUDE_OBSTACLE_HPP_
 
 /**
  * @brief Class declaration for obstacle
@@ -68,4 +68,4 @@ class Obstacle {
   double x1, x2, x3, x4, y1, y2, y3, y4;
 };
 
-#endif  // CPP_BOILERPLATE_INCLUDE_OBSTACLE_HPP_
+#endif  // DESKTOP_MIDTERM_INCLUDE_OBSTACLE_HPP_
