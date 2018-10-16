@@ -53,9 +53,10 @@ void Obstacle::createObstacleSpace(double robotL, double robotW, int length,
   }
   // Check whether after adding robot dimension the new obstacle
   // is still within the map boundaries
-  if (((double) x1 - largest) >= 0 && ((double) y1 - largest) >= 0) {
-    x1 = (int) (x1 - largest);
-    y1 = (int) (y1 - largest);
+  if ((static_cast<double>(x1) - largest) >= 0
+      && (static_cast<double>(y1) - largest) >= 0) {
+    x1 = static_cast<int>(x1 - largest);
+    y1 = static_cast<int>(y1 - largest);
     y2 = y1;
     x4 = x1;
   } else {
@@ -64,10 +65,10 @@ void Obstacle::createObstacleSpace(double robotL, double robotW, int length,
     y2 = y1;
     x4 = x1;
   }
-  if (((double) x2 + largest) <= (double) width
-      && ((double) y3 + largest) <= (double) length) {
-    x2 = (int) (x2 + largest);
-    y3 = (int) (y3 + largest);
+  if ((static_cast<double>(x2) + largest) <= static_cast<double>(width)
+      && (static_cast<double>(y3) + largest) <= static_cast<double>(length)) {
+    x2 = static_cast<int>(x2 + largest);
+    y3 = static_cast<int>(y3 + largest);
     x3 = x2;
     y4 = y3;
   } else {
@@ -81,12 +82,12 @@ void Obstacle::createObstacleSpace(double robotL, double robotW, int length,
 void Obstacle::calculateVertices(double centerX, double centerY, double length,
                        double width) {
   // Calculate the vertices of the rectangle from the given data
-  x1 = (int) (centerX - width / 2);
-  y1 = (int) (centerY - length / 2);
-  x2 = (int) (centerX + width / 2);
+  x1 = static_cast<int>(centerX - width / 2);
+  y1 = static_cast<int>(centerY - length / 2);
+  x2 = static_cast<int>(centerX + width / 2);
   y2 = y1;
   x3 = x2;
-  y3 = (int) (centerY + length / 2);
+  y3 = static_cast<int>(centerY + length / 2);
   x4 = x1;
   y4 = y3;
 }
