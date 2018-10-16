@@ -31,10 +31,8 @@ using std::make_pair;
 
 Astar::Astar() {
   // Initializing values to the attributes of Astar class
-  startNode.first = -1;
-  startNode.second = -1;
-  endNode.first = -1;
-  endNode.second = -1;
+  startNode = make_pair(0, 0);
+  endNode = make_pair(0, 0);
 }
 
 Astar::~Astar() {

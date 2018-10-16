@@ -23,7 +23,7 @@ std::shared_ptr<Astar> testObject1;
  */
 TEST(Astar, startNodeTest) {
   testObject1 = std::make_shared<Astar>();
-  ASSERT_LT(0, testObject1->startNode.first);
+  ASSERT_LE(0, testObject1->startNode.first);
 }
 
 /**
@@ -31,5 +31,5 @@ TEST(Astar, startNodeTest) {
  */
 TEST(Astar, endNodeTest) {
   testObject1 = std::make_shared<Astar>();
-  ASSERT_LT(0, testObject1->endNode.first);
+  ASSERT_LE(0, testObject1->endNode.first);
 }

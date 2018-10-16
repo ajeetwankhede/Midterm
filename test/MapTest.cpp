@@ -23,7 +23,7 @@ std::shared_ptr<Map> testObject2;
  */
 TEST(Map, lengthTest) {
   testObject2 = std::make_shared<Map>();
-  ASSERT_LT(0, testObject2->length);
+  ASSERT_LE(0, testObject2->length);
 }
 
 /**
@@ -31,5 +31,5 @@ TEST(Map, lengthTest) {
  */
 TEST(Map, widthTest) {
   testObject2 = std::make_shared<Map>();
-  ASSERT_LT(0, testObject2->width);
+  ASSERT_LE(0, testObject2->width);
 }

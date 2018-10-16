@@ -30,8 +30,8 @@ using std::endl;
 
 Map::Map() {
   // Initializing values to the attributes of Map class
-  length = -1;
-  width = -1;
+  length = 0;
+  width = 0;
   robotL = 0.0;
   robotW = 0.0;
 }
