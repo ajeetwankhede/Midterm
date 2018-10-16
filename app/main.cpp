@@ -15,7 +15,7 @@
 #include <iostream>
 #include <memory>
 #include <vector>
-#include <Map.hpp>
+#include <Astar.hpp>
 
 using std::shared_ptr;
 using std::make_shared;
@@ -25,12 +25,8 @@ using std::endl;
 
 int main() {
   // Create an object of class Map.
-  shared_ptr<Map> MAP;
-  MAP = make_shared<Map>();
-  double l = 0.0, w = 0.0;
-  // Ask user for length and width of Map
-  cout << "Enter the length and width of map: " << endl;
-  cin >> l >> w;
-  MAP->createMap(l, w);
+  shared_ptr<Astar> A;
+  A = make_shared<Astar>();
+  A->runAstar();
   return 0;
 }
