@@ -12,10 +12,10 @@
  *  Defining methods of Map class
  */
 
-#include <memory>
-#include <vector>
-#include <map>
 #include <gnuplot-iostream.h>
+#include <vector>
+#include <memory>
+#include <map>
 #include <Map.hpp>
 #include <Obstacle.hpp>
 
@@ -65,7 +65,7 @@ void Map::createMap(int l, int w) {
   int i = 0;
   while (i < noOb) {
     // Ask user for the center (x,y) of the rectangle
-    cout << "Enter the center x and y coordinate of the rectangle: ";
+    cout << "Enter the x and y coordinate of center the rectangle: ";
     cin >> x >> y;
     // Form a pair of x,y and add to the vector
     centerXY.push_back(make_pair(x, y));
@@ -128,14 +128,13 @@ void Map::showMap(pair<int, int> startNode, pair<int, int> endNode,
   Gnuplot gp;
   // Create a plot of length l(Y-axis) and width w(X-axis)
   gp << "set xrange [0:" << width << "]\nset yrange [0:" << length << "]\n";
-  //gp << "set style line 1 lc rgb \"red\"\n";
-  // '-' means read from stdin.  The send1d() function sends data to gnuplot's stdin.
+  gp << "set title \"A* search\"\n";
   gp << "set pointsize 1\n";
-  //gp << "set object 1 rect from " << xy_pts[0].first << "," << xy_pts[0].second
-  //   << " to " << xy_pts[3].first << "," << xy_pts[3].second
-  //   << " fc rgb \"red\" fillstyle solid 1.0\n";
+  gp << "set xlabel \"Width\"\n";
+  gp << "set ylabel \"Length\"\n";
+  gp << "set key outside\n";
   gp << "plot '-' with points pointtype 7 title 'Obstacle' , "
-     << "'-' with points pointtype 3 title 'Optimal path' , "
+     << "'-' with points pointtype 1 title 'Optimal path' , "
      << "'-' with points pointtype 5 title 'Start and End nodes'"
      << endl;
   gp.send1d(xy_pts);
