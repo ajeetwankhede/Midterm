@@ -12,10 +12,11 @@
  *  Astar class declaration
  */
 
-#ifndef CPP_BOILERPLATE_INCLUDE_ASTAR_HPP_
-#define CPP_BOILERPLATE_INCLUDE_ASTAR_HPP_
+#ifndef DESKTOP_MIDTERM_INCLUDE_ASTAR_HPP_
+#define DESKTOP_MIDTERM_INCLUDE_ASTAR_HPP_
 
 #include <string>
+#include <utility>
 #include <vector>
 #include <Map.hpp>
 
@@ -68,4 +69,4 @@ class Astar : public Map {
   std::vector<std::pair<double, std::pair<int, int> > > queue;
 };
 
-#endif  // CPP_BOILERPLATE_INCLUDE_ASTAR_HPP_
+#endif  // DESKTOP_MIDTERM_INCLUDE_ASTAR_HPP_
