@@ -12,21 +12,45 @@
  *   Defining methods of Output class
  */
 
+#include <iostream>
+#include <vector>
+#include <string>
+#include <fstream>
 #include <Output.hpp>
 
+using std::vector;
+using std::string;
+using std::pair;
+using std::ofstream;
+using std::cout;
+using std::endl;
+
 Output::Output() {
-  // Initializing values to the attributes of Output class
-  location = "path";
+  // Constructor stub
 }
 
 Output::~Output() {
   // Destructor stub
 }
 
-void Output::writeTextFile() {
-  // ToDo Write a code to save the trajectory coordinates in a text file
+void Output::writeTextFile(vector<pair<int, int> > path) {
+  string location = "./output/path.txt";
+  // Save the trajectory coordinates in a text file
+  ofstream myFile;
+  myFile.open(location);
+  myFile << "The x and y coordinates of the optimal trajectory are:\n";
+  myFile << "X\tY\n";
+  for (auto i : path) {
+    myFile << i.first << "\t" << i.second << "\n";
+  }
+  myFile.close();
+  cout << "A text file with trajectory coordinates has been saved at "
+      << location << endl;
 }
 
-void Output::showOutput() {
-  // ToDo Display the output of A* on a plot
+void Output::showOutput(vector<pair<int, int> > path) {
+  // Output the trajectory coordinates
+  for (auto i : path) {
+    cout << i.first << "\t" << i.second << endl;
+  }
 }
