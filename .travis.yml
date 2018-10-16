@@ -18,6 +18,7 @@ matrix:
             - g++-5
             - cmake
             - cmake-data
+            - libboost-dev
       env: COMPILER=g++-5
 
 before_install:
