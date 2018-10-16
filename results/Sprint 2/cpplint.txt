@@ -1,0 +1,16 @@
+likhita@likhita-HP-Notebook:~/Desktop/Midterm$ cpplint $( find . -name \*.hpp -or -name \*.cpp | grep -vE -e "^./build/" -e "^./vendor/" -e "^./docs/" -e "^./results" )
+Done processing ./app/Output.cpp
+Done processing ./app/Obstacle.cpp
+Done processing ./app/Astar.cpp
+Done processing ./app/Map.cpp
+Done processing ./app/main.cpp
+Done processing ./test/MapTest.cpp
+Done processing ./test/ObstacleTest.cpp
+Done processing ./test/OutputTest.cpp
+Done processing ./test/main.cpp
+Done processing ./test/AstarTest.cpp
+Done processing ./include/Output.hpp
+Done processing ./include/Obstacle.hpp
+Done processing ./include/Astar.hpp
+Done processing ./include/Map.hpp
+
