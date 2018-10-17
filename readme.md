@@ -41,7 +41,9 @@ Run program: ./app/shell-app
 ## Run a demo
 After following the steps for standard install via comman-line, run the program. The program asks whether the user want to run a demo. Say 'Y' or a demo and 'N' for manually running the program. After ouput of the demo example should look like figure below.
 
-![alt text] (output/test_demo.png)
+<p align="center">
+<img src="/output/demo_output.png">
+</p>
 
 ## Working with Eclipse IDE ##
 
