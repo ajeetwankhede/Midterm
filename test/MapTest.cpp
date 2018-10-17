@@ -12,40 +12,12 @@
  *  Defining the Test stubs for Map class
  */
 
-#include "gmock/gmock.h"
 #include <gtest/gtest.h>
 #include <memory>
 #include <Map.hpp>
 
-using ::testing::Return;
-using ::testing::AtLeast;
 
 std::shared_ptr<Map> testObject2;
-
-class Obstacle {
-  virtual ~Obstacle();
-  virtual bool verifyObstacle(const int length, const int width) = 0;
-  virtual void createObstacleSpace(double robotL, double robotW, int length,
-                                   int width) = 0;
-  virtual void calculateVertices(double centerX, double centerY, double length,
-                                 double width) = 0;
-};
-
-class MockObstacle : public Obstacle {
-  MOCK_METHOD2(verifyObstacle, bool(const int length, const int width));
-  MOCK_METHOD4(createObstacleSpace, void(double robotL, double robotW, int length,
-          int width));
-  MOCK_METHOD4(calculateVertices, void(double centerX, double centerY, double length,
-          double width));
-};
-
-TEST(Map, createMapTest) {
-  MockObstacle O;
-  //EXPECT_CALL(O, verifyObstacle(1,1)).WillOnce(Return(true));
-  EXPECT_CALL(O, calculateVertices(5.0,5.0,1.0,1.0)).Times(AtLeast(2));
-  testObject2 = std::make_shared<Map>();
-  EXPECT_TRUE(testObject2->createMap(10, 10, 'Y'));
-}
 
 /**
  * @brief Check if the length of map is less than zero
