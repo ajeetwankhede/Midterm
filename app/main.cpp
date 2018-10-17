@@ -12,21 +12,11 @@
  *  main for running the path planning module
  */
 
-#include <iostream>
-#include <memory>
-#include <vector>
 #include <Astar.hpp>
-
-using std::shared_ptr;
-using std::make_shared;
-using std::cout;
-using std::cin;
-using std::endl;
 
 int main() {
   // Create an object of class Map.
-  shared_ptr<Astar> A;
-  A = make_shared<Astar>();
-  A->runAstar();
+  Astar A;
+  A.runAstar();
   return 0;
 }
