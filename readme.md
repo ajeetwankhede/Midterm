@@ -16,10 +16,6 @@ Navigator: Ajeet Wankhede
 A 2D path planner with A* algorithm will be designed and developed, for Acme Robotics, for the navigation of their TurtleBot 2, in a known warehouse environment. The path planner will assist the TurtleBot in maneuvering through the warehouse for autonomous surveillance. The A* algorithm will ensure optimality of the path, with obstacle avoidance defined in the floor plan. The output of the path planner will be a trajectory of the robot defined by Cartesian coordinates. A controller module, developed by Acme Robotics, will monitor the velocity of the robot and ensure it is following the path provided. The robot also has a 2D LIDAR sensor to detect humans in its path with the help of perception module developed
 by Acme Robotics.
 
-## TODO
-1. Complete the stub implementations.
-2. Run the continuous integration.
-
 ## Link for SIP document
 https://docs.google.com/spreadsheets/d/1-j5CXI1eY91Z-8jk83BunUeLEoEDe8iBQdnBuzrfptE/edit?usp=sharing 
 
@@ -42,6 +38,10 @@ make
 Run tests: ./test/cpp-test
 Run program: ./app/shell-app
 ```
+## Run a demo
+After following the steps for standard install via comman-line, run the program. The program asks whether the user want to run a demo. Say 'Y' or a demo and 'N' for manually running the program. After ouput of the demo example should look like figure below.
+
+![alt text] (output/test_demo.png)
 
 ## Working with Eclipse IDE ##
 
