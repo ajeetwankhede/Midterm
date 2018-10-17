@@ -39,10 +39,10 @@ class Map {
    *
    *   @param int value of length of the map
    *   @param int value of width of the map
-   *
+   *   @param string value of demo
    *   @return none
    */
-  void createMap(int l, int w);
+  void createMap(int l, int w, char demo);
 
   /**
    *   @brief Call this method to modify the Map
