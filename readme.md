@@ -7,9 +7,22 @@
 Driver: Ajeet Wankhede
 Navigator: Likhita Madiraju
 
+## Sprint 1 Discussion 
+1. Implement class stubs (Task#10 MCL, Task#11 OBCL, Task#12 ACL, Task#13 OPCL).
+2. Add MIT license.
+3. Remove bugs using cppcheck and cpplint (Task#14 SCA).
+4. Run Travis and Coveralls (Task#15 RTST).
+5. Update readme (Task#18 URD).
+
 ## Author Name for Sprint 2
 Driver: Likhita Madiraju
 Navigator: Ajeet Wankhede
+
+## Sprint 2 Discussion
+1. Add more test stubs (Task#16 ATST subtasks: #1 AAT, #2 MAT, #3 OBAT).
+2. Add demo for displaying sample output of AStar algorithm for path planning for a given obstacle space, start and end nodes to output a trajectory map in gnu plot and a text file with coordinates of trajectory.
+3. Update UML diagrams (Task#17 UCD).
+4. Update readme (Task#18 URD).
 
 ## Project Overview
 
