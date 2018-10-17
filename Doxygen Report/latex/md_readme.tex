@@ -1,0 +1,118 @@
+\href{https://travis-ci.org/ajeetwankhede/Midterm}\texttt{ } \subsection*{\href{https://coveralls.io/github/ajeetwankhede/Midterm?branch=master}\texttt{ } }
+
+\subsection*{Author Name for Sprint 1}
+
+Driver\+: Ajeet Wankhede Navigator\+: Likhita Madiraju
+
+\subsection*{Sprint 1 Discussion}
+
+
+\begin{DoxyEnumerate}
+\item Implement class stubs (Task\#10 M\+CL, Task\#11 O\+B\+CL, Task\#12 A\+CL, Task\#13 O\+P\+CL).
+\item Add M\+IT license.
+\item Remove bugs using cppcheck and cpplint (Task\#14 S\+CA).
+\item Run Travis and Coveralls (Task\#15 R\+T\+ST).
+\item Update readme (Task\#18 U\+RD).
+\end{DoxyEnumerate}
+
+\subsection*{Author Name for Sprint 2}
+
+Driver\+: Likhita Madiraju Navigator\+: Ajeet Wankhede
+
+\subsection*{Sprint 2 Discussion}
+
+
+\begin{DoxyEnumerate}
+\item Add more test stubs (Task\#16 A\+T\+ST subtasks\+: \#1 A\+AT, \#2 M\+AT, \#3 O\+B\+AT).
+\item Add demo for displaying sample output of A\+Star algorithm for path planning for a given obstacle space, start and end nodes to output a trajectory map in gnu plot and a text file with coordinates of trajectory.
+\item Update U\+ML diagrams (Task\#17 U\+CD).
+\item Update readme (Task\#18 U\+RD).
+\end{DoxyEnumerate}
+
+\subsection*{Project Overview}
+
+A 2D path planner with A$\ast$ algorithm will be designed and developed, for Acme Robotics, for the navigation of their Turtle\+Bot 2, in a known warehouse environment. The path planner will assist the Turtle\+Bot in maneuvering through the warehouse for autonomous surveillance. The A$\ast$ algorithm will ensure optimality of the path, with obstacle avoidance defined in the floor plan. The output of the path planner will be a trajectory of the robot defined by Cartesian coordinates. A controller module, developed by Acme Robotics, will monitor the velocity of the robot and ensure it is following the path provided. The robot also has a 2D L\+I\+D\+AR sensor to detect humans in its path with the help of perception module developed by Acme Robotics.
+
+\subsection*{Link for S\+IP document}
+
+\href{https://docs.google.com/spreadsheets/d/1-j5CXI1eY91Z-8jk83BunUeLEoEDe8iBQdnBuzrfptE/edit?usp=sharing}\texttt{ https\+://docs.\+google.\+com/spreadsheets/d/1-\/j5\+C\+X\+I1e\+Y91\+Z-\/8jk83\+Bun\+Ue\+L\+Eo\+E\+De8i\+B\+Qdn\+Buzrfpt\+E/edit?usp=sharing}
+
+\subsection*{Dependencies}
+
+The path planning module has following dependencies\+:
+\begin{DoxyEnumerate}
+\item googletest
+\item cmake
+\item gnuplot
+\item gnuplot-\/iostream(\href{http://stahlke.org/dan/gnuplot-iostream/}\texttt{ http\+://stahlke.\+org/dan/gnuplot-\/iostream/})
+\end{DoxyEnumerate}
+
+\#\# Standard install via command-\/line 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git clone --recursive https://github.com/ajeetwankhede/Midterm}
+\DoxyCodeLine{cd <path to repository>}
+\DoxyCodeLine{mkdir build}
+\DoxyCodeLine{cd build}
+\DoxyCodeLine{cmake ..}
+\DoxyCodeLine{make}
+\DoxyCodeLine{Run tests: ./test/cpp-test}
+\DoxyCodeLine{Run program: ./app/shell-app}
+\end{DoxyCode}
+ \subsection*{Run a demo}
+
+After following the steps for standard install via comman-\/line, run the program. The program asks whether the user want to run a demo. Say \textquotesingle{}Y\textquotesingle{} or a demo and \textquotesingle{}N\textquotesingle{} for manually running the program. After ouput of the demo example should look like figure below.
+
+ 
+
+\subsection*{Working with Eclipse I\+DE}
+
+\subsection*{Installation}
+
+In your Eclipse workspace directory (or create a new one), checkout the repo (and submodules) 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mkdir -p ~/workspace}
+\DoxyCodeLine{cd ~/workspace}
+\DoxyCodeLine{git clone --recursive https://github.com/ajeetwankhede/Midterm}
+\end{DoxyCode}
+
+
+In your work directory, use cmake to create an Eclipse project for an \mbox{[}out-\/of-\/source build\mbox{]} of cpp-\/boilerplate
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd ~/workspace}
+\DoxyCodeLine{mkdir -p boilerplate-eclipse}
+\DoxyCodeLine{cd boilerplate-eclipse}
+\DoxyCodeLine{cmake -G "Eclipse CDT4 - Unix Makefiles" -D CMAKE\_BUILD\_TYPE=Debug -D CMAKE\_ECLIPSE\_VERSION=4.7.0 -D CMAKE\_CXX\_COMPILER\_ARG1=-std=c++14 ../Midterm/}
+\end{DoxyCode}
+
+
+\subsection*{Import}
+
+Open Eclipse, go to File -\/$>$ Import -\/$>$ General -\/$>$ Existing Projects into Workspace -\/$>$ Select \char`\"{}boilerplate-\/eclipse\char`\"{} directory created previously as root directory -\/$>$ Finish
+
+\section*{Edit}
+
+Source files may be edited under the \char`\"{}\mbox{[}\+Source Directory\mbox{]}\char`\"{} label in the Project Explorer.
+
+\subsection*{Build}
+
+To build the project, in Eclipse, unfold boilerplate-\/eclipse project in Project Explorer, unfold Build Targets, double click on \char`\"{}all\char`\"{} to build all projects.
+
+\subsection*{Run}
+
+
+\begin{DoxyEnumerate}
+\item In Eclipse, right click on the boilerplate-\/eclipse in Project Explorer, select Run As -\/$>$ Local C/\+C++ Application
+\item Choose the binaries to run (e.\+g. shell-\/app, cpp-\/test for unit testing)
+\end{DoxyEnumerate}
+
+\subsection*{How to generate Doxygen report}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo apt-get install doxygen}
+\DoxyCodeLine{sudo apt install doxygen-gui}
+\DoxyCodeLine{doxywizard}
+\end{DoxyCode}
+ Open doxywizard and select the workspace as the repository. Fill the details as required and set the source code folder to the repository. Create a new folder in the repository and select that as the destination directory. Proceed with the default settings and generate the documentation. 
