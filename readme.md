@@ -1,21 +1,33 @@
 # C++ Boilerplate
-[![Build Status](https://travis-ci.org/ajeetwankhede/Midterm.svg?branch=master)](https://travis-ci.org/ajeetwankhede/Midterm) 
-[![Coverage Status](https://coveralls.io/repos/github/ajeetwankhede/Midterm/badge.svg?branch=master)](https://coveralls.io/github/ajeetwankhede/Midterm?branch=master)
+[![Build Status](https://travis-ci.org/likhitam/Midterm.svg?branch=master)](https://travis-ci.org/likhitam/Midterm) 
+[![Coverage Status](https://coveralls.io/repos/github/likhitam/Midterm/badge.svg?branch=master)](https://coveralls.io/github/likhitam/Midterm?branch=master)
 ---
 
 ## Author Name for Sprint 1
 Driver: Ajeet Wankhede
 Navigator: Likhita Madiraju
 
+## Sprint 1 Discussion 
+1. Implement class stubs (Task#10 MCL, Task#11 OBCL, Task#12 ACL, Task#13 OPCL).
+2. Add MIT license.
+3. Remove bugs using cppcheck and cpplint (Task#14 SCA).
+4. Run Travis and Coveralls (Task#15 RTST).
+5. Update readme (Task#18 URD).
+
+## Author Name for Sprint 2
+Driver: Likhita Madiraju
+Navigator: Ajeet Wankhede
+
+## Sprint 2 Discussion
+1. Add more test stubs (Task#16 ATST subtasks: #1 AAT, #2 MAT, #3 OBAT).
+2. Add demo for displaying sample output of AStar algorithm for path planning for a given obstacle space, start and end nodes to output a trajectory map in gnu plot and a text file with coordinates of trajectory.
+3. Update UML diagrams (Task#17 UCD).
+4. Update readme (Task#18 URD).
+
 ## Project Overview
 
 A 2D path planner with A* algorithm will be designed and developed, for Acme Robotics, for the navigation of their TurtleBot 2, in a known warehouse environment. The path planner will assist the TurtleBot in maneuvering through the warehouse for autonomous surveillance. The A* algorithm will ensure optimality of the path, with obstacle avoidance defined in the floor plan. The output of the path planner will be a trajectory of the robot defined by Cartesian coordinates. A controller module, developed by Acme Robotics, will monitor the velocity of the robot and ensure it is following the path provided. The robot also has a 2D LIDAR sensor to detect humans in its path with the help of perception module developed
 by Acme Robotics.
-
-## TODO
-1. Complete the stub implementations.
-2. Run the continuous integration.
-To check if PID controller converges in given time.
 
 ## Link for SIP document
 https://docs.google.com/spreadsheets/d/1-j5CXI1eY91Z-8jk83BunUeLEoEDe8iBQdnBuzrfptE/edit?usp=sharing 
@@ -25,6 +37,8 @@ https://docs.google.com/spreadsheets/d/1-j5CXI1eY91Z-8jk83BunUeLEoEDe8iBQdnBuzrf
 The path planning module has following dependencies:
 1. googletest
 2. cmake
+3. gnuplot
+4. gnuplot-iostream(http://stahlke.org/dan/gnuplot-iostream/)
 
 ## Standard install via command-line
 ```
@@ -37,6 +51,12 @@ make
 Run tests: ./test/cpp-test
 Run program: ./app/shell-app
 ```
+## Run a demo
+After following the steps for standard install via comman-line, run the program. The program asks whether the user want to run a demo. Say 'Y' or a demo and 'N' for manually running the program. After ouput of the demo example should look like figure below.
+
+<p align="center">
+<img src="/output/demo_output.png">
+</p>
 
 ## Working with Eclipse IDE ##
 

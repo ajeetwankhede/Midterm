@@ -12,10 +12,11 @@
  *  main for running the path planning module
  */
 
-#include <iostream>
+#include <Astar.hpp>
 
 int main() {
-  // ToDo Add the code for creating a map
-  // ToDo Run the A* algorithm to find the optimal trajectory
-    return 0;
+  // Create an object of class Map.
+  Astar A;
+  A.runAstar();
+  return 0;
 }

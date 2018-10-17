@@ -13,17 +13,27 @@
  */
 
 #include <gtest/gtest.h>
+#include <utility>
 #include <memory>
 #include <Astar.hpp>
 
 std::shared_ptr<Astar> testObject1;
+using std::make_pair;
+
+/**
+ * @brief Verify runAstar method
+ */
+TEST(Astar, runAstarTest) {
+  testObject1 = std::make_shared<Astar>();
+  ASSERT_LE(0, testObject1->startNode.first);
+}
 
 /**
  * @brief Check if the start node is less than zero
  */
 TEST(Astar, startNodeTest) {
   testObject1 = std::make_shared<Astar>();
-  ASSERT_LT(0.0, testObject1->startNode);
+  ASSERT_LE(0, testObject1->startNode.first);
 }
 
 /**
@@ -31,13 +41,43 @@ TEST(Astar, startNodeTest) {
  */
 TEST(Astar, endNodeTest) {
   testObject1 = std::make_shared<Astar>();
-  ASSERT_LT(0.0, testObject1->endNode);
+  ASSERT_LE(0, testObject1->endNode.first);
 }
 
 /**
- * @brief Check if the resolution is less than zero
+ * @brief Check if verifyNodes work
  */
-TEST(Astar, resolutionTest) {
+TEST(Astar, verifyNodesTest1) {
   testObject1 = std::make_shared<Astar>();
-  ASSERT_LT(0.0, testObject1->resolution);
+  testObject1->startNode = std::make_pair(1, 1);
+  testObject1->endNode = std::make_pair(9, 9);
+  testObject1->length = 10;
+  testObject1->width = 10;
+  ASSERT_EQ(1, testObject1->verifyNodes());
+}
+
+/**
+ * @brief Check if verifyNodes work
+ */
+TEST(Astar, verifyNodesTest2) {
+  testObject1 = std::make_shared<Astar>();
+  testObject1->startNode = std::make_pair(1, 1);
+  testObject1->endNode = std::make_pair(9, 9);
+  testObject1->length = 10;
+  testObject1->width = 10;
+  testObject1->obstacleSpace[testObject1->startNode] = 1;
+  ASSERT_EQ(0, testObject1->verifyNodes());
+}
+
+/**
+ * @brief Check if verifyNodes work
+ */
+TEST(Astar, verifyNodesTest3) {
+  testObject1 = std::make_shared<Astar>();
+  testObject1->startNode = std::make_pair(1, 1);
+  testObject1->endNode = std::make_pair(9, 9);
+  testObject1->length = 10;
+  testObject1->width = 10;
+  testObject1->obstacleSpace[testObject1->endNode] = 1;
+  ASSERT_EQ(0, testObject1->verifyNodes());
 }

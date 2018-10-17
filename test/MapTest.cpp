@@ -16,6 +16,7 @@
 #include <memory>
 #include <Map.hpp>
 
+
 std::shared_ptr<Map> testObject2;
 
 /**
@@ -23,7 +24,7 @@ std::shared_ptr<Map> testObject2;
  */
 TEST(Map, lengthTest) {
   testObject2 = std::make_shared<Map>();
-  ASSERT_LT(0.0, testObject2->length);
+  ASSERT_LE(0, testObject2->length);
 }
 
 /**
@@ -31,5 +32,23 @@ TEST(Map, lengthTest) {
  */
 TEST(Map, widthTest) {
   testObject2 = std::make_shared<Map>();
-  ASSERT_LT(0.0, testObject2->width);
+  ASSERT_LE(0, testObject2->width);
+}
+
+/**
+ * @brief Verify the changeRobotDimension of the map
+ */
+TEST(Map, changeRobotDimensionTest1) {
+  testObject2 = std::make_shared<Map>();
+  testObject2->changeRobotDimension(1.0, 1.0);
+  ASSERT_EQ(1.0, testObject2->robotL);
+}
+
+/**
+ * @brief Verify the changeRobotDimension of the map
+ */
+TEST(Map, changeRobotDimensionTest2) {
+  testObject2 = std::make_shared<Map>();
+  testObject2->changeRobotDimension(1.0, 1.0);
+  ASSERT_EQ(1.0, testObject2->robotW);
 }

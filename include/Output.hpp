@@ -12,13 +12,16 @@
  *  Output class declaration
  */
 
-#ifndef CPP_BOILERPLATE_INCLUDE_OUTPUT_HPP_
-#define CPP_BOILERPLATE_INCLUDE_OUTPUT_HPP_
+#ifndef DESKTOP_MIDTERM_INCLUDE_OUTPUT_HPP_
+#define DESKTOP_MIDTERM_INCLUDE_OUTPUT_HPP_
 
 #include <string>
+#include <vector>
+#include <utility>
+#include <Astar.hpp>
 
 /**
- * @brief Class declaration for displaying the output
+ * @brief Class declaration for Outputlaying the Output
  */
 class Output {
  public:
@@ -35,23 +38,20 @@ class Output {
   /**
    *   @brief Write the trajectory coordinates found by A* in a text file
    *
-   *   @param none
+   *   @param vector of pair of int value of (x,y) coordinates of path
    *
    *   @return none
    */
-  void writeTextFile();
+  void writeTextFile(std::vector<std::pair<int, int> > path);
 
   /**
-   *   @brief Display the output trajectory in a plot
+   *   @brief Output the trajectory coordinates
    *
    *   @param none
    *
    *   @return none
    */
-  void showOutput();
-
- private:
-  std::string location;
+  void showOutput(std::vector<std::pair<int, int> > path);
 };
 
-#endif  // CPP_BOILERPLATE_INCLUDE_OUTPUT_HPP_
+#endif  // DESKTOP_MIDTERM_INCLUDE_OUTPUT_HPP_

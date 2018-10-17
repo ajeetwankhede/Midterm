@@ -12,8 +12,8 @@
  *  Obstacle class declaration
  */
 
-#ifndef CPP_BOILERPLATE_INCLUDE_OBSTACLE_HPP_
-#define CPP_BOILERPLATE_INCLUDE_OBSTACLE_HPP_
+#ifndef DESKTOP_MIDTERM_INCLUDE_OBSTACLE_HPP_
+#define DESKTOP_MIDTERM_INCLUDE_OBSTACLE_HPP_
 
 /**
  * @brief Class declaration for obstacle
@@ -33,31 +33,24 @@ class Obstacle {
   /**
    *   @brief Check if obstacle lies within map boundaries
    *
-   *   @param double value of length of the map
-   *   @param double value of width of the map
+   *   @param int value of length of the map
+   *   @param int value of width of the map
    *
    *   @return bool value True if obstacle lies within map boundaries else False
    */
-  bool verifyObstacle(double length, double width);
-
-  /**
-   *   @brief Change the dimension of the robot
-   *
-   *   @param double value of length of the robot
-   *   @param double value of width of the robot
-   *
-   *   @return none
-   */
-  void changeRobotDimension1(double length, double width);
+  bool verifyObstacle(const int length, const int width);
 
   /**
    *   @brief Add the largest robot dimension to the obstacle dimensions to avoid collision
    *
-   *   @param none
+   *   @param double value of length of robot
+   *   @param double value of width of robot
+   *   @param int value of length of the map
+   *   @param int value of width of the map
    *
    *   @return none
    */
-  void createObstacleSpace();
+  void createObstacleSpace(double robotL, double robotW, int length, int width);
 
   /**
    *   @brief Calculate the vertices of rectangle from the given center coordinates and dimensions
@@ -73,7 +66,6 @@ class Obstacle {
                          double width);
 
   double x1, x2, x3, x4, y1, y2, y3, y4;
-  double robotL, robotW;
 };
 
-#endif  // CPP_BOILERPLATE_INCLUDE_OBSTACLE_HPP_
+#endif  // DESKTOP_MIDTERM_INCLUDE_OBSTACLE_HPP_

@@ -12,16 +12,18 @@
  *  Astar class declaration
  */
 
-#ifndef CPP_BOILERPLATE_INCLUDE_ASTAR_HPP_
-#define CPP_BOILERPLATE_INCLUDE_ASTAR_HPP_
+#ifndef DESKTOP_MIDTERM_INCLUDE_ASTAR_HPP_
+#define DESKTOP_MIDTERM_INCLUDE_ASTAR_HPP_
 
 #include <string>
+#include <utility>
 #include <vector>
+#include <Map.hpp>
 
 /**
  * @brief Class declaration for A* algorithm
  */
-class Astar {
+class Astar : public Map {
  public:
   /**
    * @brief Constructor
@@ -47,16 +49,24 @@ class Astar {
    *
    *   @param none
    *
-   *   @return string value specifying valid or invalid start/end nodes
+   *   @return bool value specifying valid or invalid start/end nodes
    */
-  std::string verifyNodes();
+  bool verifyNodes();
 
-  std::vector<double> pathX;
-  std::vector<double> pathY;
+  /**
+   *   @brief Decide which action to take in the A* algorithm
+   *
+   *   @param int value of action number
+   *   @param pair of int value of current node
+   *
+   *   @return pair of int value specifying new node
+   */
+  std::pair<int, int> action(int i, std::pair<int, int> currentNode);
 
-  double startNode;
-  double endNode;
-  double resolution;
+  std::vector<std::pair<int, int> > path;
+  std::pair<int, int> startNode;
+  std::pair<int, int> endNode;
+  std::vector<std::pair<double, std::pair<int, int> > > queue;
 };
 
-#endif  // CPP_BOILERPLATE_INCLUDE_ASTAR_HPP_
+#endif  // DESKTOP_MIDTERM_INCLUDE_ASTAR_HPP_
