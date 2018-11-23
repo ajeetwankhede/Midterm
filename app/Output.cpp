@@ -34,7 +34,7 @@ Output::~Output() {
 }
 
 void Output::writeTextFile(vector<pair<int, int> > path) {
-  string location = "./output/path.txt";
+  string location = "../output/path.txt";
   // Save the trajectory coordinates in a text file
   ofstream myFile;
   myFile.open(location);
