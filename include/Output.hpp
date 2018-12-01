@@ -12,8 +12,8 @@
  *  Output class declaration
  */
 
-#ifndef DESKTOP_MIDTERM_INCLUDE_OUTPUT_HPP_
-#define DESKTOP_MIDTERM_INCLUDE_OUTPUT_HPP_
+#ifndef INCLUDE_OUTPUT_HPP_
+#define INCLUDE_OUTPUT_HPP_
 
 #include <string>
 #include <vector>
@@ -54,4 +54,4 @@ class Output {
   std::vector<std::pair<int, int> > path;
 };
 
-#endif  // DESKTOP_MIDTERM_INCLUDE_OUTPUT_HPP_
+#endif  // INCLUDE_OUTPUT_HPP_

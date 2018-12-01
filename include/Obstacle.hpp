@@ -12,8 +12,8 @@
  *  Obstacle class declaration
  */
 
-#ifndef DESKTOP_MIDTERM_INCLUDE_OBSTACLE_HPP_
-#define DESKTOP_MIDTERM_INCLUDE_OBSTACLE_HPP_
+#ifndef INCLUDE_OBSTACLE_HPP_
+#define INCLUDE_OBSTACLE_HPP_
 
 /**
  * @brief Class declaration for obstacle
@@ -68,4 +68,4 @@ class Obstacle {
   double x1, x2, x3, x4, y1, y2, y3, y4;
 };
 
-#endif  // DESKTOP_MIDTERM_INCLUDE_OBSTACLE_HPP_
+#endif  // INCLUDE_OBSTACLE_HPP_

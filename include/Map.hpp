@@ -12,8 +12,8 @@
  *  Map class declaration
  */
 
-#ifndef DESKTOP_MIDTERM_INCLUDE_MAP_HPP_
-#define DESKTOP_MIDTERM_INCLUDE_MAP_HPP_
+#ifndef INCLUDE_MAP_HPP_
+#define INCLUDE_MAP_HPP_
 
 #include <map>
 #include <vector>
@@ -77,4 +77,4 @@ class Map {
   std::map<std::pair<int, int>, std::pair<int, int> > parentNode;
 };
 
-#endif  // DESKTOP_MIDTERM_INCLUDE_MAP_HPP_
+#endif  // INCLUDE_MAP_HPP_

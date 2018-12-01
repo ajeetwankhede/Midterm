@@ -12,8 +12,8 @@
  *  Astar class declaration
  */
 
-#ifndef DESKTOP_MIDTERM_INCLUDE_ASTAR_HPP_
-#define DESKTOP_MIDTERM_INCLUDE_ASTAR_HPP_
+#ifndef INCLUDE_ASTAR_HPP_
+#define INCLUDE_ASTAR_HPP_
 
 #include <string>
 #include <utility>
@@ -67,7 +67,7 @@ class Astar : public Map {
   /**
    *   @brief Show and save the output of A*
    *
-   *   @param none
+   *   @param reference to Output object
    *
    *   @return none
    */
@@ -79,4 +79,4 @@ class Astar : public Map {
   bool save;
 };
 
-#endif  // DESKTOP_MIDTERM_INCLUDE_ASTAR_HPP_
+#endif  // INCLUDE_ASTAR_HPP_
