@@ -11,13 +11,14 @@ add_executable(
     MapTest.cpp
     ObstacleTest.cpp
     OutputTest.cpp
-    
+    MockOutput.cpp
     ../app/Astar.cpp
     ../app/Map.cpp
     ../app/Obstacle.cpp
     ../app/Output.cpp
 )
 
-target_include_directories(cpp-test PUBLIC ../vendor/googletest/googletest/include 
+target_include_directories(cpp-test PUBLIC ../vendor/googletest/googletest/include
+										   ../vendor/googletest/googlemock/include
                                            ${CMAKE_SOURCE_DIR}/include)
-target_link_libraries(cpp-test PUBLIC gtest ${Boost_LIBRARIES})
+target_link_libraries(cpp-test PUBLIC gtest gmock ${Boost_LIBRARIES})
