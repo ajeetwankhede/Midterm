@@ -31,6 +31,7 @@ using std::make_pair;
 
 Astar::Astar() {
   // Constructor stub
+  save = false;
 }
 
 Astar::~Astar() {
@@ -121,9 +122,10 @@ void Astar::runAstar() {
       }
       cout << "Optimal path found." << endl;
       showMap(startNode, endNode, path);
-      Output S;
       // Show the trajectory coordinates
-      S.showOutput(path);
+      Output S;
+      S.path = path;
+      S.showOutput(1);
       // Save the path to a text file
       S.writeTextFile(path);
     } else {
@@ -221,15 +223,22 @@ void Astar::runAstar() {
       }
       cout << "Optimal path found." << endl;
       showMap(startNode, endNode, path);
-      Output S;
-      // Show the trajectory coordinates
-      S.showOutput(path);
-      // Save the path to a text file
-      S.writeTextFile(path);
+      // Call the this function to save the output
+      Output output;
+      saveOutput(output);
     } else {
       cout << "The search could not find an optimal path." << endl;
     }
   }
+}
+
+void Astar::saveOutput(Output& output) {
+  output.path = path;
+  // Show the trajectory coordinates
+  output.showOutput(1);
+  save = true;
+  // Save the path to a text file
+  output.writeTextFile(path);
 }
 
 bool Astar::verifyNodes() {
