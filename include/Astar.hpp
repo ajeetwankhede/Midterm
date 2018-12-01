@@ -19,6 +19,7 @@
 #include <utility>
 #include <vector>
 #include <Map.hpp>
+#include <Output.hpp>
 
 /**
  * @brief Class declaration for A* algorithm
@@ -63,10 +64,19 @@ class Astar : public Map {
    */
   std::pair<int, int> action(int i, std::pair<int, int> currentNode);
 
+  /**
+   *   @brief Show and save the output of A*
+   *
+   *   @param none
+   *
+   *   @return none
+   */
+  void saveOutput(Output& output);
   std::vector<std::pair<int, int> > path;
   std::pair<int, int> startNode;
   std::pair<int, int> endNode;
   std::vector<std::pair<double, std::pair<int, int> > > queue;
+  bool save;
 };
 
 #endif  // DESKTOP_MIDTERM_INCLUDE_ASTAR_HPP_
