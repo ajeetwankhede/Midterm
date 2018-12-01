@@ -58,6 +58,14 @@ After following the steps for standard install via comman-line, run the program.
 <img src="/output/demo_output.png">
 </p>
 
+## G-mock testing
+Added a g-mock test for Astar class. Created a new fucntion called saveOutput which takes reference to a Ouput class object. It then shows the generated path by Astar on the terminal.
+
+To run g-mock tests along with gtests enter the following command
+```
+Run tests: ./test/cpp-test
+```
+
 ## Working with Eclipse IDE ##
 
 ## Installation
