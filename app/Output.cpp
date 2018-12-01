@@ -48,9 +48,11 @@ void Output::writeTextFile(vector<pair<int, int> > path) {
       << location << endl;
 }
 
-void Output::showOutput(vector<pair<int, int> > path) {
+void Output::showOutput(int i) {
   // Output the trajectory coordinates
-  for (auto i : path) {
-    cout << i.first << "\t" << i.second << endl;
+  if (i == 1) {
+    for (auto i : path) {
+      cout << i.first << "\t" << i.second << endl;
+    }
   }
 }
