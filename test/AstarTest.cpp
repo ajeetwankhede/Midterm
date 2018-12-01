@@ -13,12 +13,18 @@
  */
 
 #include <gtest/gtest.h>
+#include <gmock/gmock.h>
+#include <vector>
 #include <utility>
 #include <memory>
 #include <Astar.hpp>
 
-std::shared_ptr<Astar> testObject1;
+using std::string;
+using std::pair;
 using std::make_pair;
+using std::vector;
+
+std::shared_ptr<Astar> testObject1;
 
 /**
  * @brief Verify runAstar method
