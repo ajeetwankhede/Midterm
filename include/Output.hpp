@@ -18,7 +18,6 @@
 #include <string>
 #include <vector>
 #include <utility>
-#include <Astar.hpp>
 
 /**
  * @brief Class declaration for Outputlaying the Output
@@ -51,7 +50,8 @@ class Output {
    *
    *   @return none
    */
-  void showOutput(std::vector<std::pair<int, int> > path);
+  virtual void showOutput(int i);
+  std::vector<std::pair<int, int> > path;
 };
 
 #endif  // DESKTOP_MIDTERM_INCLUDE_OUTPUT_HPP_
